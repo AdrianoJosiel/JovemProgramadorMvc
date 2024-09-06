@@ -19,6 +19,17 @@
                     <td>@aluno.Nome</td>
                     <td>@aluno.Cpf</td>
 
+                    <td>
+                        <div class="d-grid gap-2 d-md-block">
+                            <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="Editar" asp-route-id="@aluno.Id">Editar</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-grid gap-2 d-md-block">
+                            <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="Excluir" asp-route-id="@aluno.Id">Excluir</a>
+                        </div>
+                    </td>
+                    
                 </tr>
             }
         }        
@@ -27,4 +38,6 @@
 </table>
 <div class ="text-center">
     <a class="btn btn-primary" type="button" asp-controller="Aluno" asp-action="AdicionarAluno" > Adicionar Aluno </a>
-</div>    
+</div> 
+<td>
+    
