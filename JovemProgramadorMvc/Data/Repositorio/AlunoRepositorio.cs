@@ -26,6 +26,13 @@ namespace JovemProgramadorMvc.Data.Repositorio
         {
             return _bancoContexto.Aluno.FirstOrDefault(x => x.Id == id);
         }
+
+        public void EditarAluno(Aluno aluno)
+        {
+            _bancoContexto.Aluno.Update(aluno);
+            _bancoContexto.SaveChanges();
+        }
+
         public void Excluir(Aluno aluno)
         {
             _bancoContexto.Aluno.Remove(aluno);

@@ -1,4 +1,6 @@
-﻿using JovemProgramadorMvc.Data.Repositorio.Interfaces;
+﻿
+
+using JovemProgramadorMvc.Data.Repositorio.Interfaces;
 using JovemProgramadorMvc.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -42,7 +44,7 @@ namespace JovemProgramadorMvc.Controllers
 
         public IActionResult EditarAluno(Aluno aluno)
         {
-            _alunoRepositorio.Excluir(aluno);
+            _alunoRepositorio.EditarAluno(aluno);
             return RedirectToAction("Index");
         }
 
